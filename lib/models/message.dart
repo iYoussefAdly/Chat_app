@@ -6,6 +6,9 @@ class Message {
   Message(this.message, this.id);
 
   factory Message.fromJson(json) {
-    return Message(json[kMessage],json['id']);
+      if (!json.containsKey(kId) || !json.containsKey(kMessage)) {
+      print('⚠️ Missing fields in Firestore data: $json');
+  }
+    return Message(json[kMessage]??'',json[kId]??'');
   }
 }

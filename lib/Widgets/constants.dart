@@ -5,3 +5,4 @@ const String kLogo = 'assets/images/download.png';
 const String kMessagesColloection = 'messages';
 const String kMessage = 'message';
 const String kCreatedAt = 'createdAt';
+const String kId = 'id';
